@@ -1,0 +1,14 @@
+﻿@using ServiceStack
+@using ServiceStack.Razor
+@using AgeReadyNowSS.ServiceModel
+@using AgeReadyNowSS.ServiceModel.Types
+
+@inherits ViewPage<ServiceStack.RegisterResponse>
+@{
+    this.Layout = "_Layout";
+}
+@section Scripts{
+    You are now registered.
+
+    Click <a href="@Html.Raw(new HomeRequest() { }.ToGetUrl())">here</a> to get started with AgeReady.
+}

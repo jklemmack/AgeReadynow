@@ -1,0 +1,93 @@
+﻿@using ServiceStack
+@using ServiceStack.Razor
+@using AgeReadyNowSS.ServiceModel
+@using AgeReadyNowSS.ServiceModel.Types
+
+@inherits ViewPage<RegisterRequest>
+@{
+    this.Layout = "_Layout";
+
+}
+@section Scripts{
+    <script type="text/javascript">
+        var app = angular.module('myApp', []);
+        app.controller('RegistrationCtrl', ['$scope', '$http',
+            function ($scope, $http) {
+
+            }
+        ]);
+    </script>
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3" style="padding-top: 50px;">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-lock"></i> Register
+                </div>
+                <div class="panel-body">
+                    <form action="@Html.Raw(new RegisterRequest().ToPostUrl())" method="post" class="form-horizontal" name="primary">
+
+                        @if (Model.ResponseStatus != null && Model.ResponseStatus.Errors != null)
+                        {
+                            foreach (var error in Model.ResponseStatus.Errors)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    @error.FieldName:  @error.Message
+                                </div>
+                            }
+                        }
+
+                        <div class="form-group" ng-class="{'has-error': primary.firstname.$invalid}">
+                            <label class="col-sm-4 control-label">First Name:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="firstname" ng-required value="@Model.FirstName" />
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{'has-error': primary.lastname.$invalid}">
+                            <label class="col-sm-4 control-label">Last Name:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="lastname" ng-required value="@Model.LastName" />
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{'has-error': primary.email.$invalid}">
+                            <label class="col-sm-4 control-label">Email:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="email" name="email" ng-required value="@Model.Email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Password:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="password" name="password" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Confirm Password:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="password" name="confirmpassword" />
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                                <label class="col-sm-4 control-label">Enrollment Code:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="password" name="confirmpassword" />
+                                </div>
+                            </div>*@
+
+                        <input type="hidden" name="continue" value="/Home" />
+                        <input type="submit" value="Register" class="btn btn-success pull-right" />
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

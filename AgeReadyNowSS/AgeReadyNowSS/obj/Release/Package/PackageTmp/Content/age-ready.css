@@ -1,0 +1,15 @@
+﻿.navbar-inverse .navbar-nav > li > a {
+    color: #ccc;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #ccc;
+}
+
+.panel > .marketing-panel {
+    min-height: 215px !important;
+}
+
+div.assessment{
+    min-height: 280px !important;
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AgeReady-Web.config Connection String" description="AgeReady Connection String used in web.config by the application to access the database." defaultValue="Data Source=localhost;Initial Catalog=AgeReady;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Johann\\Documents\\Visual\ Studio\ 2013\\Projects\\AgeReadyNowSS\\AgeReadyNowSS\\AgeReadyNowSS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AgeReady']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,81 @@
+﻿@using ServiceStack;
+@using ServiceStack.Razor
+@using AgeReadyNowSS.ServiceModel
+@using AgeReadyNowSS.ServiceModel.Types
+
+@inherits ViewPage<List<TaskListResponse>>
+
+@{
+    Layout = "_Layout";
+
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Resources for the [domain] Caregiving Domain
+                <span class="h4">
+                    <a href="#" class="pull-right" style="padding-top:10px;" data-toggle="modal" data-target="#helpModal">
+                        <i class="fa fa-question-circle"></i> Help on this page
+                    </a>
+                </span>
+            </h2>
+
+        </div>
+    </div>
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="@Html.Raw(new HomeRequest().ToGetUrl())">Home</a>
+                </li>
+                <li>
+                    <a href="#">Assessment &amp; Resources for [parent]</a>
+                </li>
+                <li class="active">[Domain] resources</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12" style="padding-bottom: 20px;">
+            This screen contains a list of all tasks for the [domain] Caregiving Domain.  Each task is marked with whether it has been completed
+            for [care recipient].  Tasks that have not been completed also indicate the importance you assigned to that task.  Selecting the given
+            task will
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var task in Model)
+        {
+            string panelClass = "panel-primary";
+            if (task.Completed)
+            {
+                panelClass = "panel-success";
+            }
+
+            <div class="col-md-3 col-sm-6">
+                <div class="panel @panelClass text-center">
+                    <div class="panel-heading" style="height: 80px;">
+                        <h4><i class="fa fa-check-square-o"></i> @task.ShortText</h4>
+                    </div>
+                    <div class="panel-body" style="border-top: 1px solid #ddd;">
+                        <a href="#" class="btn btn-primary" style="margin-top: 10px;">View Resources</a>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="text-center">
+                            <a href="#aboutPopup">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+</div>
+

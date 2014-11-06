@@ -1,0 +1,61 @@
+﻿@using ServiceStack;
+@using ServiceStack.Razor
+@using AgeReadyNowSS.ServiceModel
+@using AgeReadyNowSS.ServiceModel.Types
+
+@inherits ViewPage<AssessmentResponse>
+
+@{
+    Layout = "_Layout";
+    var nextLink = new AssessmentRequest()
+    {
+        ParentId = Model.ParentId,
+        CurentPage = Model.CurrentPage,
+        NextPage = Model.CurrentPage + 1,
+        Domain = Model.Domain        
+    }.ToGetUrl();
+
+    var exitLink = new ParentSummaryRequest()
+    {
+        Id = Model.ParentId
+    }.ToGetUrl();
+}
+
+<div class="container assessment">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">@Model.Domain Assessment</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="@Html.Raw(new HomeRequest().ToGetUrl())">Home</a>
+                </li>
+                <li>
+                    <a href="@Html.Raw(new ParentSummaryRequest(){ Id = Model.ParentId}.ToGetUrl())">Assessment &amp; Resources for @Model.ParentName</a>
+                </li>
+                <li class="active">@Model.Domain Assessment </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row assessment">
+        <div class="col-lg-12" style="padding-bottom: 20px;">
+            @Model.DomainSummary  This is the domain summary.  Have more explanitory text, including and expanding the information we had on
+            the previous screen.  Perhaps include some videos.  Explicitly state how many questions there are, and the expected time to complete.
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-5">
+            <a class="btn btn-primary" href="@Html.Raw(nextLink)">Exit Assessment</a>
+        </div>
+        <div class="col-sm-2 col-sm-offset-2">
+            <a class="btn btn-primary" href="@Html.Raw(nextLink)">Continue To The @Model.Domain Assessment</a>
+        </div>
+    </div>
+
+</div>

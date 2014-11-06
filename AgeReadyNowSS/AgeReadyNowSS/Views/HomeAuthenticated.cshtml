@@ -1,0 +1,202 @@
+﻿@using ServiceStack;
+@using ServiceStack.Razor
+@using AgeReadyNowSS.ServiceModel
+@using AgeReadyNowSS.ServiceModel.Types
+
+@inherits ViewPage<HomeResponse>
+
+@{
+    Layout = "_Layout";
+
+    var viewParents = Model.Parents.Take(4).ToList();
+    for (int i = 1; i < 4 - viewParents.Count; i++)
+    {
+
+    };
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Care Recipients
+                <span class="h4">
+                    <a href="#" class="pull-right" style="padding-top:10px;" data-toggle="modal" data-target="#helpModal">
+                        <i class="fa fa-question-circle"></i> Help on this page
+                    </a>
+                </span>
+            </h2>
+
+        </div>
+    </div>
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">Home </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12" style="padding-bottom: 20px;">
+            This screen contains an overview of each of the care recipients for your account.  You may create up to 4 care recipients, including
+            yourself, at any one time.  For each recipient, you will see an overall readiness score.  To improve the readiness score for an
+            individual, select the <strong>Assessment &amp; Resources</strong> option.
+        </div>
+    </div>
+    @if (viewParents.Count > 0)
+    {
+        <div class="row">
+            @* For each parent *@
+            @foreach (var parent in viewParents)
+            {
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h3>@parent.Name</h3>
+                        </div>
+                        <div class="panel-body">
+                            Readiness Score
+                            <h2> &lt;50% </h2>
+                        </div>
+                        <div class="panel-body" style="border-top: 1px solid #ddd;">
+                            <a href="@Html.Raw( new ParentSummaryRequest() { Id = parent.Id}.ToGetUrl())" class="btn btn-primary">Assessment &amp; Resources</a>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center">
+                                <a href="@Html.Raw( new ParentRequest(){ Id = parent.Id }.ToGetUrl())">Edit Care Recipient</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* For each empty placeholder *@
+            @for (int i = 0; i < 4 - viewParents.Count; i++)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3> -- </h3>
+                        </div>
+                        <div class="panel-body">
+                            Readiness Score
+                            <h2> -- </h2>
+                        </div>
+                        <div class="panel-body" style="border-top: 1px solid #ddd;">
+                            <a href="@Html.Raw( new ParentRequest().ToGetUrl() )" class="btn btn-success "> <i class="fa fa-plus"></i> Add Care Recipient</a>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center">
+                                @*<a href="@Html.Raw( new ParentRequest().ToGetUrl() )"><strong>Add Care Recipient</strong></a>*@
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    }
+    else
+    {
+
+        <div class="row">
+            <div class="col-lg-12 text-center" style="vertical-align: middle;">
+                <h3>
+                    <a href="#" style="padding-top:10px;" data-toggle="modal" data-target="#learnHowModal">
+                        Learn how the AgeReady Program works
+                    </a>
+                </h3>
+                <p><strong>-OR -</strong></p>
+                <p>Get started now</p>
+                <p>
+                    <a href="@Html.Raw( new ParentRequest().ToGetUrl() )" class="btn btn-success "> <i class="fa fa-plus"></i> Add Care Recipient</a>
+                </p>
+            </div>
+        </div>
+    }
+
+
+
+    @* About Caregiving*@
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                About Caregiving
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </div>
+        <div class="col-md-6">
+            <p>Flavor text discussing caregiving today.  Note that adult parents often care for both their own children and parents at the same time.</p>
+
+            <p>Caregiving is often entered in to with an abrupt event, like a fall or other accident.  Hard to form a plan then because of the stress. </p>
+
+            <p>Many issues, so create a care recipient above, and drill in to Assessment &amp; Resources.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="helpModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title"><i class="fa fa-question-circle"></i> Help for the <strong>Care Recipients</strong> Page</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    The <strong>Care Recipients</strong> page is your starting point in the AgeReady program.  From here you first select
+                    <strong><i class="fa fa-plus"></i> Add Care Recipient</strong>.  After filling out the basic information about that
+                    recipient, you will return to this page.
+                </p>
+                <p>
+                    Then, for each recipient, you select <strong>Assessment &amp; Resources</strong> to access the assessment and resources tailored
+                    to that individual.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="learnHowModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title"><i class="fa fa-question-circle"></i> How the <strong>AgeReady Program</strong> works</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    This is placeholder text that walks users through the 3 steps of the AgeReady Program:
+                    <ol>
+                        <li>Think of a loved one and create a <i>Care Recipient</i> entry for that person.</li>
+                        <li>Complete the assessment for one or more of the <i>Domains of Caregiving</i></li>
+                        <li>Review the Readiness Score for each domain, then access resources to help improve that score for the Care Recipent.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

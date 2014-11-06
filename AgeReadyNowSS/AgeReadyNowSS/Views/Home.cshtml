@@ -1,0 +1,161 @@
+﻿@using ServiceStack;
+@using ServiceStack.Razor;
+
+@inherits ViewPage
+
+@{
+    Layout = "_Layout";
+}
+
+@section Scripts{
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                interval: 3000
+            })
+        });
+        $('.carousel').carousel({
+            interval: 3000 //changes the speed
+        })
+    </script>
+
+}
+
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            @*<div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>*@
+            <div class="fill" style="background-image:url('/Content/Images//old-couple-at-sunset.jpg');"></div>
+            <div class="carousel-caption">
+                <h2>Prepare for a longer and fuller life</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('/Content/Images/CHILD-KISSING-GRANDPARENT.jpg');"></div>
+            <div class="carousel-caption">
+                <h2>Resources for yourself and loved ones</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('/Content/Images/Ambulance-at-night.jpg');"></div>
+            <div class="carousel-caption">
+                <h2>Have a plan for the unexpected</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Welcome to AgeReady Now
+            </h1>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-exclamation-triangle"></i> Are you ready?</h4>
+                    </div>
+                    <div class="panel-body marketing-panel">
+                        <p>Are you ready to help your parents plan for the future? Do you know how to plan for your own future? This online tool will help you identify key tasks that you or your parents need to complete in the future, such as creating a living will, having a comprehensive care plan, and deciding when someone is no longer safe to drive.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check-square-o"></i> AgeReady Assessment</h4>
+                    </div>
+                    <div class="panel-body marketing-panel">
+                        <p>It all begins with our unique AgeReady assessment.  The assessment is broken down into four categories: medical, legal, emotional, and social.  Each section takes just 10 to 15 minutes to complete.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-compass"></i> Resouces you can use</h4>
+                    </div>
+                    <div class="panel-body marketing-panel">
+                        <p>At the end of each category you will learn what your high priority tasks are and you will be given access to national and state-based resources that have been critically approved and reviewed in order to help you address elder care challenges you may face in the future for either yourself or your parents.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Video Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">The Abrupt Entrance to Caregiving</h2>
+        </div>
+        <div class="col-md-6">
+            Most adult children assume care giving duties for a parent after a health event. In the movie "Dad", Jack Lemmon's wife, his primary care giver, suffers a heart attack and thrusts both of his adult children into caregiving duties - duties for which his son, played by Ted Danson, is totally unprepared. This video emphasizes the importance of being prepared for caring for an aging parent.
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="~/Content/Images/Intro-To-Aging.png" alt="" style="height:360px; width: 576px;" width="576" height="360">
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Video Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">The Importance of AgeReady</h2>
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="~/Content/Images/Parker-Intro.png" alt="" style="height:360px; width: 576px;" width="576" height="360">
+        </div>
+        <div class="col-md-6">
+            Dr. Michael Parker, selected by the Hartford Foundation and Gerontological Society of America as one of the top 10 geriatric scholars in the United States, explains the importance of completing the AgeReady Assessment.
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="well">
+        <div class="row">
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-default btn-block" href="#">Get started now    </a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
