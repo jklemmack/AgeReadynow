@@ -22,3 +22,4 @@ C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowS
 C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowSS\AgeReadyNowSS.Tests\obj\Debug\AgeReadyNowSS.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowSS\AgeReadyNowSS.Tests\obj\Debug\AgeReadyNowSS.Tests.dll
 C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowSS\AgeReadyNowSS.Tests\obj\Debug\AgeReadyNowSS.Tests.pdb
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.Tests\obj\Debug\AgeReadyNowSS.Tests.csprojResolveAssemblyReference.cache

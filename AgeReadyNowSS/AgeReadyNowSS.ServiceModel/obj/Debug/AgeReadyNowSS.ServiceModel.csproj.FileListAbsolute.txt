@@ -11,3 +11,17 @@ C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowS
 C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Text.xml
 C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\obj\Debug\AgeReadyNowSS.ServiceModel.dll
 C:\Users\Johann\Documents\Visual Studio 2013\Projects\AgeReadyNowSS\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\obj\Debug\AgeReadyNowSS.ServiceModel.pdb
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\AgeReadyNowSS.ServiceModel.dll
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\AgeReadyNowSS.ServiceModel.pdb
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Client.dll
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Common.dll
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.dll
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Text.dll
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.xml
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Client.xml
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Common.xml
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\bin\Debug\ServiceStack.Text.xml
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\obj\Debug\AgeReadyNowSS.ServiceModel.csprojResolveAssemblyReference.cache
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\obj\Debug\AgeReadyNowSS.ServiceModel.dll
+C:\Users\Johann\Documents\AgeReadynow\AgeReadyNowSS\AgeReadyNowSS.ServiceModel\obj\Debug\AgeReadyNowSS.ServiceModel.pdb

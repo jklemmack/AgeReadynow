@@ -26,6 +26,9 @@ namespace AgeReadyNowSS.ServiceModel.Types
         [References(typeof(State))]
         public string StateCode { get; set; }
 
+        [Reference]
+        public State State { get; set; }
+
         public Guid LegacyResourceId { get; set; }
 
     }

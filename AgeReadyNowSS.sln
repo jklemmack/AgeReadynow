@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeReadyNowSS", "AgeReadyNowSS\AgeReadyNowSS\AgeReadyNowSS.csproj", "{E669FB75-4FCC-4213-B151-7C38BD9DF7BB}"
 EndProject
@@ -10,6 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeReadyNowSS.ServiceInterface", "AgeReadyNowSS\AgeReadyNowSS.ServiceInterface\AgeReadyNowSS.ServiceInterface.csproj", "{6112FBBF-CF5C-46AC-A526-5CD3A79FA200}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeReadyNowSS.Tests", "AgeReadyNowSS\AgeReadyNowSS.Tests\AgeReadyNowSS.Tests.csproj", "{7930706E-EF78-4612-9A0B-D84CB94EFF40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{ED81310B-7939-4C1A-9163-947CE3751A0E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

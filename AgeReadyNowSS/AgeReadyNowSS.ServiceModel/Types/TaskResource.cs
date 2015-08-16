@@ -12,7 +12,16 @@ namespace AgeReadyNowSS.ServiceModel.Types
         [AutoIncrement]
         public int Id { get; set; }
 
+        [References(typeof(Task))]
         public int TaskId { get; set; }
+
+        [References(typeof(Resource))]
         public int ResourceId { get; set; }
+
+        [Reference]
+        public Task Task { get; set; }
+
+        [Reference]
+        public Resource Resource { get; set; }
     }
 }

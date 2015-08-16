@@ -16,6 +16,9 @@ namespace AgeReadyNowSS.ServiceModel.Types
         [References(typeof(UserAuth))]
         public int UserAuthId { get; set; }
 
+        [Reference]
+        public UserAuth UserAuth { get; set; }
+
         [References(typeof(Parent))]
         public int ParentId { get; set; }
 
@@ -24,6 +27,9 @@ namespace AgeReadyNowSS.ServiceModel.Types
 
         [Reference]
         public Task Task { get; set; }
+
+        [Reference]
+        public Parent Parent { get; set; }
 
         public bool Completed { get; set; }
 

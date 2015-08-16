@@ -36,7 +36,13 @@ namespace AgeReadyNowSS.ServiceModel.Types
     public class TaskListResponse
     {
         public int Id { get; set; }
+
+        [References(Domain)]
         public int DomainId { get; set; }
+
+        [Reference]
+        public Domain Domain { get; set; }
+
         //public string DomainName { get; set; }
         public string ShortText { get; set; }
         public string PromptText { get; set; }
@@ -47,7 +53,12 @@ namespace AgeReadyNowSS.ServiceModel.Types
         public bool Completed { get; set; }
         public int Timeline { get; set; }
 
+        [References(typeof(Parent))]
         public int ParentId { get; set; }
+
+        [Reference]
+        public Parent Parent { get; set; }
+
         public string ParentName { get; set; }
     }
 }

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.Video">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABAAQgAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Types\Video.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.Domain">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAIAAAAAAA=</HashCode>
+      <FileName>Types\Domain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.Parent">
+    <Position X="1.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAACEAAAAQAAAAACAIAAAABBAAACAA=</HashCode>
+      <FileName>Types\Parent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserAuth" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.Resource">
+    <Position X="13.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAACQAAAAQAACAAAAAgAAAABAAAAAA=</HashCode>
+      <FileName>Types\Resource.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.State">
+    <Position X="13.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Types\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.SurveyResponse">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAAAAIAAAAAQAAAAAgAAAIAAkAAAAAACAA=</HashCode>
+      <FileName>Types\SurveyResponse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Task" />
+      <Property Name="Parent" />
+      <Property Name="UserAuth" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.Task">
+    <Position X="7.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ARACAAAAAAQAAAAAEAAAAAAAAgAAAAACAAAAAAQAAIA=</HashCode>
+      <FileName>Types\Task.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Domain" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.TaskListResponse">
+    <Position X="1.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ARACAAAgAAQAAAIAAAAAQABAAgAAAAACAgAAAAQAAIA=</HashCode>
+      <FileName>Types\Task.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Domain" />
+      <Property Name="Parent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AgeReadyNowSS.ServiceModel.Types.TaskResource">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAgAAAAAAAAAAAAAgAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Types\TaskResource.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Task" />
+      <Property Name="Resource" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ServiceStack.Auth.UserAuth" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="AgeReadyNowSS.ServiceModel.Types.RelationshipEnum">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAABAAAAAAAAAAAACAAAAAAABAA=</HashCode>
+      <FileName>Types\Parent.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
